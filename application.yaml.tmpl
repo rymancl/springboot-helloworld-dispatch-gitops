@@ -13,6 +13,8 @@ spec:
       labels:
         app: hello-world-dispatch
     spec:
+      imagePullSecrets: 
+        - name: regcred
       containers:
       - image: "$({ .imageName })"
         name: hello-world-dispatch
