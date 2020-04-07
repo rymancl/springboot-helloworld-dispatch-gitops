@@ -16,6 +16,8 @@ spec:
       labels:
         app: hello-world-dispatch
     spec:
+      imagePullSecrets:
+        - name: regcred
       containers:
       - image: "513021945672.dkr.ecr.us-west-2.amazonaws.com/helloworld@sha256:4a9fc8da80dc3db9d5fa263c8418bd09846058edcf4d4d3bc98d17636677d9e6"
         name: hello-world-dispatch
